@@ -16,25 +16,26 @@ AudioBuffer ab;
 void setup()
 {
   w = new Wave();
-  
-  colorMode(HSB);
- m = new Minim(this);
- ap = m.loadFile("Dolesng.mp3", 512);
- ab = ap.mix;
- ap.play();
-
- frameRate(60);
- size(512, 512, P3D);
  
-
+  //General setup  
+  frameRate(60);
+  size(512, 512, P3D);
+  colorMode(HSB);
+  
+  //This allows for the music to play 
+  m = new Minim(this);
+  ap = m.loadFile("Dolesng.mp3", 512);
+  ab = ap.mix;
+  ap.play();
 }
 
 
 void draw()
 {
+ println(frameRate);
+
  w.BuildWaves();
 
-  println(frameRate);
   
   
 }

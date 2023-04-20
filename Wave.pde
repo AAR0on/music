@@ -13,8 +13,10 @@ int gap = 20;
 float average = 0;
 float lerpedAverage = 0;
   
+
 Wave(){
-  cols = W / gap;
+ 
+ cols = W / gap;
  rows = H / gap;
  grid = new float[cols][rows];  
   
@@ -25,6 +27,15 @@ Wave(){
   
 void BuildWaves()
 {
+ background(0);
+ stroke(255);
+ noFill();
+ 
+ //This is the position of the waves
+ translate(width / 2, height / 2 + 30);
+ rotateX(PI / 3);
+ translate(- W / 2, - H / 2);
+ 
   float total = 0;
   
   for(int i = 0; i < ab.size() ; i++)
@@ -48,15 +59,6 @@ void BuildWaves()
    }
    yoff += 0.2;
  }
-  
- background(0);
- stroke(255);
- noFill();
- 
- translate(width / 2, height / 2 + 30);
- rotateX(PI / 3);
- translate(- W / 2, - H / 2);
-  
    
    for(int y = 0; y < rows - 1; y++)
  {
