@@ -27,6 +27,8 @@ Wave(){
   
 void BuildWaves()
 {
+  
+ //This is the colour for the line in the waves
  background(0);
  stroke(255);
  noFill();
@@ -35,17 +37,35 @@ void BuildWaves()
  translate(width / 2, height / 2 + 30);
  rotateX(PI / 3);
  translate(- W / 2, - H / 2);
- 
+   
+ //This makes the form of the waves
+   for(int y = 0; y < rows - 1; y++)
+ {
+   beginShape(TRIANGLE_STRIP);
+   for(int x = 0; x < cols; x++)
+   {
+     float c = map(x, 0, ab.size(), 0, 255);
+     stroke(c, 255, 255);
+     vertex(x * gap, y * gap, grid[x][y]);
+     vertex(x * gap, (y + 1)* gap, grid[x][y*1]);
+   }
+   endShape();
+ }
+  
+}
+
+//This funcation makes the waves move
+void Moving(){
+  
   float total = 0;
   
   for(int i = 0; i < ab.size() ; i++)
   {
     total += abs(ab.get(i));
   }
-  
+ 
   average = total / (float) ab.size();
   lerpedAverage = lerp(lerpedAverage, average, 0.1f);
-  
   moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
@@ -58,19 +78,6 @@ void BuildWaves()
      xoff+= 0.2;
    }
    yoff += 0.2;
- }
-   
-   for(int y = 0; y < rows - 1; y++)
- {
-   beginShape(TRIANGLE_STRIP);
-   for(int x = 0; x < cols; x++)
-   {
-     float c = map(x, 0, ab.size(), 0, 255);
-     stroke(c, 255, 255);
-     vertex(x * gap, y * gap, grid[x][y]);
-     vertex(x * gap, (y + 1)* gap, grid[x][y*1]);
-   }
-   endShape();
  }
   
 }

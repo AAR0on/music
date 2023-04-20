@@ -35,6 +35,7 @@ void draw()
  println(frameRate);
 
  w.BuildWaves();
+ w.Moving();
 
   
   
