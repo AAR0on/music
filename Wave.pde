@@ -1,18 +1,7 @@
-Wave w;
-
-import ddf.minim.*;
-import ddf.minim.analysis.*;
-import ddf.minim.effects.*;
-import ddf.minim.signals.*;
-import ddf.minim.spi.*;
-import ddf.minim.ugens.*;
-
-Minim m;
-AudioInput ai;
-AudioPlayer ap;
-AudioBuffer ab;
-
-/*float[][] grid; 
+class Wave{
+  
+// variables for the structer of the waves
+float[][] grid; 
 float moving = 0;
 int W = 4500;
 int H = 3500;
@@ -22,37 +11,19 @@ int cols;
 int rows;
 int gap = 20;
 float average = 0;
-float lerpedAverage = 0;*/
-
-void setup()
-{
-  w = new Wave();
+float lerpedAverage = 0;
   
-  colorMode(HSB);
- m = new Minim(this);
- ap = m.loadFile("Dolesng.mp3", 512);
- ab = ap.mix;
- ap.play();
-
- frameRate(60);
- size(512, 512, P3D);
- 
- //cols = W / gap;
-// rows = H / gap;
- //grid = new float[cols][rows];  
-}
-
-
-void draw()
-{
- w.BuildWaves();
-
-  println(frameRate);
-  
+Wave(){
+  cols = W / gap;
+ rows = H / gap;
+ grid = new float[cols][rows];  
   
 }
-
-/*void BuildWaves()
+  
+  
+  
+  
+void BuildWaves()
 {
   float total = 0;
   
@@ -100,4 +71,12 @@ void draw()
    endShape();
  }
   
-}*/
+}
+  
+  
+  
+  
+  
+  
+  
+}
