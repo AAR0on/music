@@ -82,7 +82,6 @@ void Moving(){
    yoff += 0.2;
  }
   
-  float c = color(map(lerpedAverage, 0.0f, 0.5f, 0, 255), 255, 255);
 
 }
   
