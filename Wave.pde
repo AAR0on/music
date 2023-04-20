@@ -12,10 +12,13 @@ int rows;
 int gap = 20;
 float average = 0;
 float lerpedAverage = 0;
+
+float c = color(map(lerpedAverage, 0.0f, 0.5f, 0, 255), 255, 255);
+
   
 
 Wave(){
- 
+  
  cols = W / gap;
  rows = H / gap;
  grid = new float[cols][rows];  
@@ -30,7 +33,7 @@ void BuildWaves()
   
  //This is the colour for the line in the waves
  background(0);
- stroke(255);
+ stroke(c);
  noFill();
  
  //This is the position of the waves
@@ -44,7 +47,6 @@ void BuildWaves()
    beginShape(TRIANGLE_STRIP);
    for(int x = 0; x < cols; x++)
    {
-     float c = map(x, 0, ab.size(), 0, 255);
      stroke(c, 255, 255);
      vertex(x * gap, y * gap, grid[x][y]);
      vertex(x * gap, (y + 1)* gap, grid[x][y*1]);
@@ -54,7 +56,7 @@ void BuildWaves()
   
 }
 
-//This funcation makes the waves move
+//This functions makes the waves move
 void Moving(){
   
   float total = 0;
@@ -80,6 +82,8 @@ void Moving(){
    yoff += 0.2;
  }
   
+  float c = color(map(lerpedAverage, 0.0f, 0.5f, 0, 255), 255, 255);
+
 }
   
   
