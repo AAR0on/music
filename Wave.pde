@@ -33,11 +33,12 @@ void BuildWaves()
 {
   
  //This is the colour for the line in the waves
- background(0);
+ //background(0);
  stroke(c);
  noFill();
- 
+ strokeWeight(1);
  //This is the position of the waves
+ pushMatrix();
  translate(width / 2, height / 2 + 30);
  rotateX(PI / 3);
  translate(- W / 2, - H / 2);
@@ -53,7 +54,7 @@ void BuildWaves()
    }
    endShape();
  }
-  
+  popMatrix();
 }
 
 //This functions makes the waves move
@@ -70,7 +71,7 @@ void Moving(){
   lerpedAverage = lerp(lerpedAverage, average, 0.1f);
   cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
   c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
-  println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
+  //println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
   moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
