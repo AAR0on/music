@@ -20,6 +20,7 @@ void setup()
   //General setup  
   frameRate(60);
   size(512, 512, P3D);
+  //fullScreen(P3D);
   colorMode(HSB);
   
   //This allows for the music to play 
@@ -32,7 +33,7 @@ void setup()
 
 void draw()
 {
- println(frameRate);
+ //println(frameRate);
 
  w.BuildWaves();
  w.Moving();

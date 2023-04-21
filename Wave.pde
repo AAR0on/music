@@ -12,8 +12,9 @@ int rows;
 int gap = 20;
 float average = 0;
 float lerpedAverage = 0;
+float cLerpedAverage = 0;
 
-float c = color(map(lerpedAverage, 0.0f, 0.5f, 0, 255), 255, 255);
+color c = 0;
 
   
 
@@ -40,14 +41,13 @@ void BuildWaves()
  translate(width / 2, height / 2 + 30);
  rotateX(PI / 3);
  translate(- W / 2, - H / 2);
-   
  //This makes the form of the waves
    for(int y = 0; y < rows - 1; y++)
  {
    beginShape(TRIANGLE_STRIP);
    for(int x = 0; x < cols; x++)
    {
-     stroke(c, 255, 255);
+     stroke(c);
      vertex(x * gap, y * gap, grid[x][y]);
      vertex(x * gap, (y + 1)* gap, grid[x][y*1]);
    }
@@ -68,6 +68,9 @@ void Moving(){
  
   average = total / (float) ab.size();
   lerpedAverage = lerp(lerpedAverage, average, 0.1f);
+  cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
+  c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
+  println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
   moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
