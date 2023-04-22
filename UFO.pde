@@ -32,7 +32,6 @@ class UFO
     translate(pos.x, pos.y, pos.z);
     stroke(c);
     strokeWeight(7);
-    //rotateY(theta);
     rotateX(45);
     fill(255);
     box(size);
