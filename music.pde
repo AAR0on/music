@@ -34,7 +34,7 @@ void setup()
 
 void draw()
 {
-  //println(frameRate);
+  println(frameRate);
   background(0);
   w.BuildWaves();
   w.Moving();
@@ -61,15 +61,15 @@ void drawUFOs()
 {
   if(!cruise)
   {
-    xUFO = lerp(xUFO, pmouseX, 0.6f);
+    xUFO = lerp(xUFO, pmouseX, 0.4f);
     yUFO = map(mouseY, height, 0, height/6, height/2);
   }
   else
   {    
     xLerp = width/2 + (width/3 * sin(radians(thetaA)));
     yLerp = height/3 + (150 * cos(radians(thetaB)));
-    thetaA += 4;
-    thetaB += w.lerpedAverage * 20;
+    thetaA += 3;
+    thetaB -= w.lerpedAverage * 20;
     xUFO = lerp(xUFO, xLerp, 0.4f);
     yUFO = lerp(yUFO, yLerp, 0.4f);
   } 
