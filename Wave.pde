@@ -28,13 +28,22 @@ Wave(){
 }
   
   
-  
+  float t = 0;
   
 void BuildWaves()
 {
   
  //This is the colour for the line in the waves
  //background(0);
+ pushMatrix();
+ strokeWeight(0.5f);
+ stroke(20, 255, 255);
+ fill(30, 255, 255);
+ translate(width/2, -750, -2500);
+ t++;
+ rotateY(t);
+ sphere(500);
+ popMatrix();
  stroke(c);
  noFill();
  strokeWeight(1);

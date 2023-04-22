@@ -18,7 +18,7 @@ class UFO
     this.c = c;
     theta = 0;
     this.pos = new PVector(x, y, z);
-    sphereDetail(20, 5);
+    //sphereDetail(20, 5);
   }
   
   void update()
@@ -37,6 +37,7 @@ class UFO
     fill(255);
     box(size);
     popMatrix();
+
   }
   
   
