@@ -13,6 +13,7 @@ int gap = 20;
 float average = 0;
 float lerpedAverage = 0;
 float cLerpedAverage = 0;
+float test = 0;
 
 color c = 0;
 
@@ -72,7 +73,8 @@ void Moving(){
   cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
   c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
   //println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
-  moving -= ap.left.get(0) + lerpedAverage * 2;
+  test = ap.left.get(0) + lerpedAverage * 2;
+  moving -= test;
   float yoff = moving;
     
   for(int y = 0; y < rows; y++)

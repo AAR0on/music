@@ -7,12 +7,12 @@ import ddf.minim.signals.*;
 import ddf.minim.spi.*;
 import ddf.minim.ugens.*;
 
+//Audio Vars
 Minim m;
 AudioInput ai;
 AudioPlayer ap;
 AudioBuffer ab;
-
-UFO ufo;
+boolean paused = true;
 
 void setup()
 {
@@ -23,6 +23,7 @@ void setup()
   //size(512, 512, P3D);
   fullScreen(P3D);
   colorMode(HSB);
+  noCursor();
 
   //This allows for the music to play
   m = new Minim(this);
@@ -31,18 +32,56 @@ void setup()
   ap.play();
 }
 
-
 void draw()
 {
   //println(frameRate);
   background(0);
-  ufo.pos.x = mouseX;
-  ufo.pos.y = map(mouseY, height, 0, height/6, height/2);
-  ufo.pos.z = map(mouseY, height, 0, -100, 100);
-  ufo.size = map(mouseY, height, 0, 10, 100);
-  ufo.c = color(map(w.cLerpedAverage, 0.0f, 0.1f, 0, 255), 255, 255);
   w.BuildWaves();
   w.Moving();
+  drawUFOs();
+}
+
+void keyPressed()
+{
+  if(key == 'c')
+  {
+    cruise = !cruise;
+  }
+}
+
+//UFO Vars
+UFO ufo;
+float xUFO, yUFO, zUFO, sUFO;
+color cUFO;
+boolean cruise = false;
+float thetaA, thetaB = 0;
+float xLerp, yLerp;
+
+void drawUFOs()
+{
+  if(!cruise)
+  {
+    xUFO = lerp(xUFO, pmouseX, 0.6f);
+    yUFO = map(mouseY, height, 0, height/6, height/2);
+  }
+  else
+  {    
+    xLerp = width/2 + (width/3 * sin(radians(thetaA)));
+    yLerp = height/3 + (150 * cos(radians(thetaB)));
+    thetaA += 4;
+    thetaB += w.lerpedAverage * 20;
+    xUFO = lerp(xUFO, xLerp, 0.4f);
+    yUFO = lerp(yUFO, yLerp, 0.4f);
+  } 
+  zUFO = map(yUFO, height/6, height/2, -100, 100);
+  sUFO = map(yUFO, height/6, height/2, 10, 100);
+  cUFO = color(map(w.cLerpedAverage, 0.0f, 0.1f, 0, 255), 255, 255);
+  
+  ufo.pos.x = xUFO;
+  ufo.pos.y = yUFO;
+  ufo.pos.z = zUFO;
+  ufo.size = sUFO;
+  ufo.c = cUFO;
   ufo.update();
   ufo.render();
 }
