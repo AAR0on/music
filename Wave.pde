@@ -13,8 +13,6 @@ int gap = 20;
 float average = 0;
 float lerpedAverage = 0;
 float cLerpedAverage = 0;
-float test = 0;
-
 color c = 0;
 
   
@@ -36,13 +34,16 @@ void BuildWaves()
  //This is the colour for the line in the waves
  //background(0);
  pushMatrix();
- strokeWeight(0.5f);
+ //noStroke();
+ //strokeWeight(0.5f);
  stroke(20, 255, 255);
  fill(30, 255, 255);
  translate(width/2, -750, -2500);
- t++;
- rotateY(t);
- sphere(500);
+ ellipse(0, 0, 750, 750);
+ fill(0);
+ noStroke();
+ translate(0, 0, 10);
+ rect(-375, 131, 755, 300);
  popMatrix();
  stroke(c);
  noFill();
@@ -82,8 +83,7 @@ void Moving(){
   cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
   c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
   //println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
-  test = ap.left.get(0) + lerpedAverage * 2;
-  moving -= test;
+  moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
   for(int y = 0; y < rows; y++)
