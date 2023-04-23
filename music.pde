@@ -85,22 +85,7 @@ void drawUFOs()
     xUFO = lerp(xUFO, xLerp, 0.4f);
     yUFO = lerp(yUFO, yLerp, 0.4f);
   }
-  zUFO = map(yUFO, height/6, height/2, -100, 100);
-  sUFO = map(yUFO, height/6, height/2, 10, 100);
   cUFO = color(map(w.cLerpedAverage, 0.0f, 0.1f, 0, 255), 255, 255);
-  
-  if(xUFO > width/2)
-  {
-    ufo.theta = -map(xUFO, (width/2), width, 0, 45/30);//lerp(ufo.theta, -5, 0.5f);
-    println("a");
-    println(ufo.theta);
-  }     
-  if(xUFO < width/2)
-  {
-     ufo.theta = map(xUFO, 0, (width/2), 45/30, 0);
-  }
-  
-  
   
   ufo.pos.x = xUFO;
   ufo.pos.y = yUFO;

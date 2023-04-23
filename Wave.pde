@@ -33,18 +33,7 @@ void BuildWaves()
   
  //This is the colour for the line in the waves
  //background(0);
- pushMatrix();
- //noStroke();
- //strokeWeight(0.5f);
- stroke(20, 255, 255);
- fill(30, 255, 255);
- translate(width/2, -750, -2500);
- ellipse(0, 0, 750, 750);
- fill(0);
- noStroke();
- translate(0, 0, 10);
- rect(-375, 131, 755, 300);
- popMatrix();
+ buildSun();
  stroke(c);
  noFill();
  strokeWeight(1);
@@ -82,7 +71,6 @@ void Moving(){
   lerpedAverage = lerp(lerpedAverage, average, 0.1f);
   cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
   c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
-  //println(map(cLerpedAverage, 0.0f, 1f, 200, 255));
   moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
@@ -96,11 +84,38 @@ void Moving(){
    }
    yoff += 0.2;
  }
-  
-
 }
   
-  
+  void buildSun()
+  {
+   pushMatrix();
+   stroke(color(map(cLerpedAverage, 0.0f, 0.1f, 0, 30), 255, 255));
+   fill(30, 255, 255);
+   translate(width/2, -750, -2500);
+   t++;
+   rotateY(t);
+   sphere(500);
+   popMatrix();
+   
+   pushMatrix();
+   fill(0);
+   noStroke();
+   translate(width/2, -750, -1700);
+   rect(-750, 400, 2000, 750);
+   popMatrix();
+   
+   pushMatrix();
+   fill(160, 255, 255, 70);
+   translate(width/2, -750, -2500);
+   circle(0, 0, 2000);
+   popMatrix();
+   
+   /*pushMatrix();
+   translate(0, -750, -2500);
+   rect(0, 0, width * 5, height);
+   popMatrix();
+   */
+  }
   
   
   

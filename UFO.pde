@@ -23,7 +23,16 @@ class UFO
   
   void update()
   {
-
+    if(pos.x > width/2)
+    {
+      theta = -map(pos.x, (width/2), width, 0, 45/30);
+    }     
+    if(pos.x < width/2)
+    {
+      theta = map(pos.x, 0, (width/2), 45/30, 0);
+    }
+    pos.z = map(pos.y, height/6, height/2, -100, 100);
+    size = map(pos.y, height/6, height/2, 10, 100);
   }
   
   void render()
