@@ -4,6 +4,7 @@ class UFO
   float speed;
   float theta;
   color c;
+  color cThruster;
   PVector pos;
   
   UFO()
@@ -33,6 +34,7 @@ class UFO
     }
     pos.z = map(pos.y, height/6, height/2, -100, 100);
     size = map(pos.y, height/6, height/2, 10, 100);
+    cThruster = color(map(pos.y, height/6, height/2, 40, 20), 255, 255);
   }
   
   void render()
@@ -56,7 +58,7 @@ class UFO
     box(size/3);
     translate(0, 0 + size/6, 0);
     noStroke();
-    fill(30, 255, 255);
+    fill(cThruster);
     sphere(size/8);
     
     //Right Wing
@@ -67,7 +69,7 @@ class UFO
     box(size/3);
     translate(0, 0 + size/6, 0);
     noStroke();
-    fill(30, 255, 255);
+    fill(cThruster);
     sphere(size/8);
     
     //Thrusters
