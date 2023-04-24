@@ -24,7 +24,8 @@ void setup()
   fullScreen(P3D);
   colorMode(HSB);
   noCursor();
-  w.colRange =  new PVector(200, 255);
+  w.colRange01 =  new PVector(200, 255);
+  w.colRange02 =  new PVector(35, -20, 35);
   
   //This allows for the music to play
   m = new Minim(this);
@@ -35,7 +36,7 @@ void setup()
 
 void draw()
 {
-  println(w.colRange.y);
+  println(w.colRange02.z);
   background(160, 255, 10);
   w.BuildWaves();
   w.Moving();
@@ -61,18 +62,30 @@ void keyPressed()
   }
   if(keyCode == UP)
   {
-    if(w.colRange.y != 255)
+    if(w.colRange01.y != 255)
     {
-      w.colRange.x += 55;
-      w.colRange.y += 55;
+      w.colRange01.x += 55;
+      w.colRange01.y += 55;
+    }
+    if(w.colRange02.y != -20)
+    {
+       w.colRange02.x-= 55;
+       w.colRange02.y-= 55;
+       w.colRange02.z-= 55;
     }
   }
   if(keyCode == DOWN)
   {
-    if(w.colRange.y != 35)
+    if(w.colRange01.y != 35)
     {
-      w.colRange.x -= 55;
-      w.colRange.y -= 55;
+      w.colRange01.x -= 55;
+      w.colRange01.y -= 55;
+    }
+    if(w.colRange02.z != 255)
+    {
+       w.colRange02.x+= 55;
+       w.colRange02.y+= 55;
+       w.colRange02.z+= 55;
     }
   }
 }
