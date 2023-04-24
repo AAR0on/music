@@ -14,7 +14,7 @@ float average = 0;
 float lerpedAverage = 0;
 float cLerpedAverage = 0;
 color c = 0;
-
+PVector colRange;
   
 
 Wave(){
@@ -26,7 +26,6 @@ Wave(){
 }
   
   
-  float t = 0;
   
 void BuildWaves()
 {
@@ -70,7 +69,7 @@ void Moving(){
   average = total / (float) ab.size();
   lerpedAverage = lerp(lerpedAverage, average, 0.1f);
   cLerpedAverage = lerp(cLerpedAverage, average, 0.4f);
-  c = color(map(cLerpedAverage, 0.0f, 0.1f, 200, 255), 255, 255);
+  c = color(map(cLerpedAverage, 0.0f, 0.1f, colRange.x, colRange.y), 255, 255);
   moving -= ap.left.get(0) + lerpedAverage * 2;
   float yoff = moving;
     
@@ -86,6 +85,7 @@ void Moving(){
  }
 }
   
+  float t = 0;
   void buildSun()
   {
    pushMatrix();

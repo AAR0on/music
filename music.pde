@@ -24,7 +24,8 @@ void setup()
   fullScreen(P3D);
   colorMode(HSB);
   noCursor();
-
+  w.colRange =  new PVector(200, 255);
+  
   //This allows for the music to play
   m = new Minim(this);
   ap = m.loadFile("Dolesng.mp3", 512);
@@ -34,7 +35,7 @@ void setup()
 
 void draw()
 {
-  println(frameRate);
+  println(w.colRange.y);
   background(160, 255, 10);
   w.BuildWaves();
   w.Moving();
@@ -58,7 +59,22 @@ void keyPressed()
         ap.loop();
       }
   }
-    
+  if(keyCode == UP)
+  {
+    if(w.colRange.y != 255)
+    {
+      w.colRange.x += 55;
+      w.colRange.y += 55;
+    }
+  }
+  if(keyCode == DOWN)
+  {
+    if(w.colRange.y != 35)
+    {
+      w.colRange.x -= 55;
+      w.colRange.y -= 55;
+    }
+  }
 }
 
 //UFO Vars
