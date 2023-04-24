@@ -36,7 +36,7 @@ void setup()
 
 void draw()
 {
-  println(w.colRange02.z);
+  println(frameRate);
   background(160, 255, 10);
   w.BuildWaves();
   w.Moving();
