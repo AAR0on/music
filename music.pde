@@ -34,8 +34,8 @@ void setup()
 
 void draw()
 {
-  //println(frameRate);
-  background(0);
+  println(frameRate);
+  background(160, 255, 10);
   w.BuildWaves();
   w.Moving();
   drawUFOs();

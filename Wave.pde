@@ -105,16 +105,19 @@ void Moving(){
    popMatrix();
    
    pushMatrix();
-   fill(160, 255, 255, 70);
    translate(width/2, -750, -2500);
+   fill(160, 255, 10);
    circle(0, 0, 2000);
+   fill(160, 255, 0);
+   rect(-width * 2, -1000, width * 4, 1050);
+   fill(160, 255, 15);
+   circle(0, 0, 1600);
+   fill(160, 255, 20);
+   circle(0, 0, 1600);
+   fill(160, 255, 25);
+   circle(0, 0, 1400);
+
    popMatrix();
-   
-   /*pushMatrix();
-   translate(0, -750, -2500);
-   rect(0, 0, width * 5, height);
-   popMatrix();
-   */
   }
   
   
