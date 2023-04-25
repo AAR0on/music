@@ -14,7 +14,6 @@ class Sky
   {
    pushMatrix();
    stroke(color(map(w.cLerpedAverage, 0.0f, 0.1f, colRange.z, colRange.y), 255, 255));
-   println(color(map(w.lerpedAverage, 0.0f, 0.1f, colRange.z, colRange.y), 255, 255));
    fill(colRange.x, 255, 255);
    translate(width/2, -750, -2500);
    t++;
@@ -35,7 +34,7 @@ class Sky
    circle(0, 0, 2000);
    fill(160, 255, 0);
    rect(-width * 2, -1000, width * 4, 1050);
-   //drawStars();
+   drawStars();
    noStroke();
    fill(160, 255, 15);
    circle(0, 0, 1600);
@@ -62,10 +61,10 @@ class Sky
   
   void drawStars()
   {   
-    stroke(30, 50, 255, 120);
     for(int i = 0; i < 2000; i++)
     {
       strokeWeight(starsS[i]);
+      stroke(30, 50, 255, map(w.cLerpedAverage, 0.0f, 0.1f, 0, i/7));
       point(starsX[i], starsY[i]);
     }
   }
