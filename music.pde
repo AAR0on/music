@@ -1,4 +1,5 @@
 Wave w;
+Sky sky;
 
 
 import ddf.minim.*;
@@ -19,14 +20,14 @@ void setup()
 {
   w = new Wave();
   ufo = new UFO(100, 0.1f, color(255, 255, 255), width/2, height/3, 100);
+  sky = new Sky(35, -20, 35);
   //General setup
   frameRate(60);
   //size(512, 512, P3D);
   fullScreen(P3D);
   colorMode(HSB);
   noCursor();
-  w.colRange01 =  new PVector(200, 255);
-  w.colRange02 =  new PVector(35, -20, 35);
+  w.colRange =  new PVector(200, 255);
   
   //This allows for the music to play
   m = new Minim(this);
@@ -63,30 +64,30 @@ void keyPressed()
   }
   if(keyCode == UP)
   {
-    if(w.colRange01.y != 255)
+    if(w.colRange.y != 255)
     {
-      w.colRange01.x += 55;
-      w.colRange01.y += 55;
+      w.colRange.x += 55;
+      w.colRange.y += 55;
     }
-    if(w.colRange02.y != -20)
+    if(sky.colRange.y != -20)
     {
-       w.colRange02.x-= 55;
-       w.colRange02.y-= 55;
-       w.colRange02.z-= 55;
+       sky.colRange.x-= 55;
+       sky.colRange.y-= 55;
+       sky.colRange.z-= 55;
     }
   }
   if(keyCode == DOWN)
   {
-    if(w.colRange01.y != 35)
+    if(w.colRange.y != 35)
     {
-      w.colRange01.x -= 55;
-      w.colRange01.y -= 55;
+      w.colRange.x -= 55;
+      w.colRange.y -= 55;
     }
-    if(w.colRange02.z != 255)
+    if(sky.colRange.z != 255)
     {
-       w.colRange02.x+= 55;
-       w.colRange02.y+= 55;
-       w.colRange02.z+= 55;
+       sky.colRange.x+= 55;
+       sky.colRange.y+= 55;
+       sky.colRange.z+= 55;
     }
   }
 }
