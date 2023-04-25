@@ -35,7 +35,7 @@ class Sky
    circle(0, 0, 2000);
    fill(160, 255, 0);
    rect(-width * 2, -1000, width * 4, 1050);
-   drawStars();
+   //drawStars();
    noStroke();
    fill(160, 255, 15);
    circle(0, 0, 1600);
@@ -48,25 +48,25 @@ class Sky
   
   void initialiseStars()
   {
-    for (int i = 0; i < 1000; i ++)
+    for (int i = 0; i < 2000; i ++)
     {
       starsX[i] = random(-width * 2, width * 4);
       starsY[i] = random(-1000, 50);
-      starsS[i] = random(0.5f, 2);
+      starsS[i] = random(0.1f, 2.5f);
     }
   }
 
-  float starsX[] = new float[1000];
-  float starsY[] = new float[1000];
-  float starsS[] = new float[1000];
+  float starsX[] = new float[2000];
+  float starsY[] = new float[2000];
+  float starsS[] = new float[2000];
   
   void drawStars()
-  {
+  {   
     stroke(30, 50, 255, 120);
-    for(int i = 0; i < 1000; i++)
+    for(int i = 0; i < 2000; i++)
     {
-      point(starsX[i], starsY[i]);
       strokeWeight(starsS[i]);
+      point(starsX[i], starsY[i]);
     }
   }
   
