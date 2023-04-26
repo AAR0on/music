@@ -18,9 +18,10 @@
 
 | Class/asset | Source |
 |-----------|-----------|
-| MyClass.cs | Self written |
-| MyClass1.cs | Modified from [reference]() |
-| MyClass2.cs | From [reference]() |
+| music.cs | Self written |
+| Wave.pde | Modified from [reference]() |
+| UFO.pde | From [reference]() |
+| Sky.pde | From [reference]() |
 
 # References
 
