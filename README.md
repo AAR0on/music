@@ -13,7 +13,7 @@
 # Instructions for use
 - Space Bar - Pause
 - C - Cruise Control
--Vertical Arrows - Colour Change
+- Vertical Arrows - Colour Change
 - Mouse - Moves Space Ship
 
 # How it works
