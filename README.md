@@ -14,5 +14,5 @@
 
 # How it works
 
-[![YouTube](http://img.youtube.com/vi/xHCmOVXWEjU/0.jpg)](https://youtu.be/dQw4w9WgXcQ)
+
 
