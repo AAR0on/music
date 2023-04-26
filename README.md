@@ -11,19 +11,25 @@
 
 
 # Instructions for use
+Space Bar - Pause
+C - Cruise Control
+Vertical Arrows - Colour Change
+Mouse - Moves Space Ship
 
 # How it works
 
-# List of classes/assets in the project and whether made yourself or modified or if its from a source, please give the reference
+
+# Classes/Assets
 
 | Class/asset | Source |
 |-----------|-----------|
 | music.cs | Self written |
 | Wave.pde | Modified from [reference]() |
-| UFO.pde | From [reference]() |
-| Sky.pde | From [reference]() |
+| UFO.pde | Self written |
+| Sky.pde | Self Written |
 
 # References
+
 
 # What I am most proud of in the assignment
 
