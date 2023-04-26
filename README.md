@@ -11,10 +11,12 @@
 
 
 # Instructions for use
-- Space Bar - Pause
-- C - Cruise Control
-- Vertical Arrows - Colour Change
-- Mouse - Moves Space Ship
+| Input | Output |
+|-----------|-----------|
+| Space Bar | Pause |
+| Mouse | Moves Space Ship |
+| C | Cruise Control |
+| Vertical Arrows | Colour Change |
 
 # How it works
 
