@@ -38,7 +38,7 @@ The song is a small song by a small group that we happened to fall across and we
 
 # How you interpreted it's mood and structure
 
-We interpreted by 
+We interpreted the song's mood as an goofty song on the outside but the more we listened to it, the more meaning we found within the song. The structure of the song is an local dundalk group known as T.P.M, They structured the song into 4 verses song by the two people within the group with one chorus. 
 
 # What inspired you to create the visual elements you designed
 
