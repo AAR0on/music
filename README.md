@@ -9,7 +9,7 @@
 
 # Description
 
-The song is a small song by a small group that we happened to fall across and we thought the song was funny but also meanfully. So as soon as we heard it we knew that this song would be perfect for us.
+The song is a small song by a small group that we happened to fall across us and we thought the song was funny but also meanfully. So as soon as we heard it we knew that this song would be perfect for us.
 
 
 # Instructions for use
