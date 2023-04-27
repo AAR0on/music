@@ -1,6 +1,6 @@
 # Project Title: We Just Be Cruising
 
-[![YouTube](http://img.youtube.com/watch?v=pbmntCfVY98.jpg)](https://www.youtube.com/watch?v=pbmntCfVY98)
+[![YouTube](http://img.https://i9.ytimg.com/vi/pbmntCfVY98/mq2.jpg?sqp=CNTLq6IG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGggEyh_MA8=&rs=AOn4CLAweHAlKjQXIUhOVs0mLu7ozVepog.jpg)](https://www.youtube.com/watch?v=pbmntCfVY98)
 
 | Name | Student Number |
 |-----------|-----------|
