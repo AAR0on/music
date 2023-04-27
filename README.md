@@ -22,6 +22,8 @@ The song is a small song by a small group that we happened to fall across and we
 
 # How it works
 
+The project works by using the following - Minim library, classes, variables, functions, arrays, if statements, loops ect.. 
+
 
 # Classes/Assets
 
