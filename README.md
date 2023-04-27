@@ -34,7 +34,11 @@ The song is a small song by a small group that we happened to fall across and we
 
 # References
 
+Reference for Wave.pde:
 [![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=IKB1hWWedMk)
+
+Reference for song:
+[![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=pVlJAV8BrZw)
 
 # How you interpreted it's mood and structure
 
