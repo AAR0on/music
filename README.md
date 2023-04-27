@@ -56,7 +56,7 @@ We listen to the song and thought it was a goofy song and thought it would be a 
 
 # What We're am most proud of in the assignment
 
-We are pround of the overall assignment in general, we thought we did a really good job with just the two of us. The overall landscape to the spaceship we are very proud of are assignment overall.
+We are pround of the overall assignment in general, we thought we did a really good job with just the two of us. The overall landscape to the spaceship we are very proud of our assignment overall.
 
 
 
