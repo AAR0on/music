@@ -36,6 +36,13 @@ This music assignment basically is an endless loop, there is a spaceship flying 
 
 [![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=IKB1hWWedMk)
 
+# How you interpreted it's mood and structure
+
+We interpreted by 
+
+# What inspired you to create the visual elements you designed
+
+We listen to the song and thought it was a goofy song and thought it would be a good choice for us to use for our assignment. We thought about the lyrics of the song and realised that the song was about an music group with dreams but have no money. So we thought we could make something out of the ordinary and that's when we came up with the idea, a spaceship. terrain, the sun and an endless loop as far as the eye can see. Kinda like representing thier dreams in a way.
 
 # What We're am most proud of in the assignment
 
