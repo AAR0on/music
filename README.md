@@ -2,7 +2,7 @@
 
 # Video link
 
-[![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=66rcU9fkYZc)
+[![YouTube](http://img.youtube.com/vi/66rcU9fkYZc/0.jpg)](https://www.youtube.com/watch?v=66rcU9fkYZc)
 
 # Team members
 
