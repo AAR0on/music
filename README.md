@@ -32,7 +32,7 @@ The project works by using the following - Minim library, classes, variables, fu
 | Class/asset | Source |
 |-----------|-----------|
 | music.cs | Self written |
-| Wave.pde | Modified from [reference]() |
+| Wave.pde | Modified from [reference](https://www.youtube.com/watch?v=IKB1hWWedMk) |
 | UFO.pde | Self written |
 | Sky.pde | Self Written |
 
