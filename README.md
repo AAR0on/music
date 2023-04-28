@@ -39,10 +39,10 @@ The project works by using the following - Minim library, classes, variables, fu
 # References
 
 Reference for Wave.pde:
-[![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=IKB1hWWedMk)
+[![YouTube](http://img.youtube.com/vi/IKB1hWWedMk/0.jpg)](https://www.youtube.com/watch?v=IKB1hWWedMk)
 
 Reference for song:
-[![YouTube](http://img..jpg)](https://www.youtube.com/watch?v=pVlJAV8BrZw)
+[![YouTube](http://img.youtube.com/vi/pVlJAV8BrZw/0.jpg)](https://www.youtube.com/watch?v=pVlJAV8BrZw)
 
 # How you interpreted it's mood and structure
 
