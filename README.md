@@ -1,7 +1,5 @@
 # Project Title: We Just Be Cruising
 
-# Video link
-
 [![YouTube](http://img.youtube.com/vi/66rcU9fkYZc/0.jpg)](https://www.youtube.com/watch?v=66rcU9fkYZc)
 
 # Team members
@@ -54,7 +52,7 @@ We interpreted the song's mood as an goofty song on the outside but the more we 
 
 We listen to the song and thought it was a goofy song and thought it would be a good choice for us to use for our assignment. We thought about the lyrics of the song and realised that the song was about an music group with dreams but have no money. So we thought we could make something out of the ordinary and that's when we came up with the idea, a spaceship. terrain, the sun and an endless loop as far as the eye can see. Kinda like representing thier dreams in a way.
 
-# What We're am most proud of in the assignment
+# What we're most proud of in the assignment
 
 We are pround of the overall assignment in general, we thought we did a really good job with just the two of us. The overall landscape to the spaceship we are very proud of our assignment overall.
 
